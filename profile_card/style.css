@@ -80,6 +80,7 @@ main {
     display: flex;
     flex-direction: column;
     font-family: 'Kumbh Sans', sans-serif;
+    box-shadow: 0 1rem 2.5rem .2rem var(--dark-grayish-blue);
 }
 
 /* Cuts the primary-card into 4ths */
