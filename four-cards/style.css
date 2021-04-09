@@ -112,15 +112,15 @@ main {
 #content .card:nth-child(3) {
     grid-column: 2/3;
     grid-row: 3/5;
-    background-image: url("./images/icon-calculator.svg");
-    border-top: 4px solid var(--card-blue);
+    background-image: url("./images/icon-karma.svg");
+    border-top: 4px solid var(--card-orange);
 }
 
 #content .card:nth-child(4) {
     grid-column: 3/4;
     grid-row: 2/4;
-    background-image: url("./images/icon-karma.svg");
-    border-top: 4px solid var(--card-orange);
+    background-image: url("./images/icon-calculator.svg");
+    border-top: 4px solid var(--card-blue);
 }
 
 
