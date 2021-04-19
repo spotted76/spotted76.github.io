@@ -151,7 +151,20 @@ main {
     background-color: var(--custom-White);
 }
 
-@media (max-width: 600px)
+@media (max-width: 1024px)
+{
+    /* Re-do grid area for mobile */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); 
+        grid-template-areas:
+            "purple purple gray"
+            "white-s dark dark"
+            "white-t white-t white-t";
+    }
+}
+
+@media (max-width: 724px)
 {
     /* Re-do grid area for mobile */
     main {
