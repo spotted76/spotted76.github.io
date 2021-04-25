@@ -1,0 +1,222 @@
+
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);   
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Very-Dark-Blue);
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position-y: 50vh;
+    background-size: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 65%;
+    gap: 2%;
+
+}
+
+/* Common properties between both boxes */
+.purple-box {
+    background: var(--Dark-Blue);
+    border-radius: 5px;
+}
+
+#fylo-box {
+    width: 350px;
+    height: 215px;
+    border-top-right-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 215px;
+    
+}
+
+#fylo-box > img {
+    width: 15rem;
+    margin-left: 3rem;
+}
+
+#icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: 3rem;
+}
+
+.icon-border {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--Very-Dark-Blue);
+    padding: 1.5rem;
+    border-radius: .8rem;
+
+    /* Flex settings for child items in this container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#usage {
+    flex-grow: 3; /* Flex settings for self */
+    height: 180px;
+    color: var(--Pale-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#usage-content {
+    position: relative; /*Needed for the usage bubble*/
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+#pbar-outer {
+    background-color: var(--Very-Dark-Blue);
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  #pbar-inner {
+    width: 81%;
+    height: 1.4rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    margin-left: 2px;
+  }
+  
+  #pbar-indicator {
+    background-color: var(--Pale-Blue);
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    float: right;
+  }
+
+  #info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-weight: 700;
+  }
+
+  #info p {
+      margin: .8rem 0;
+  }
+
+  #usage-bubble {
+      position: absolute;
+      top: -50px;
+      right: 3rem;
+      background: white;
+      border-radius: 1rem;
+      height: 8rem;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  #usage-bubble > div:first-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 1rem;
+  }
+
+
+  #num {
+      color: var(--Very-Dark-Blue);
+      font-size: 5rem;;
+      margin-right: 1rem;
+      font-weight: 700;
+  }
+
+  #units {
+    color: var(--Grayish-Blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: .2rem;
+}
+
+#triangle {
+    position: absolute;
+    border-right: solid white 40px;
+    border-top: solid 40px transparent;
+    border-bottom: solid 40px transparent;
+    right: 0;
+    bottom: -40px;
+
+}
+
+@media (max-width: 1065px)
+{
+    /* Reduce main font size to get items to fit */
+    :root {
+        font-size: 8px;
+    }
+
+    /* Switch to column view, and change the background */
+    body {
+        flex-direction: column;
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position-y: 0;
+    }
+
+    /* Minor adjustments from flex direction change */
+    #main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #fylo-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #usage {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #usage-bubble
+    {
+        top: 100%;
+        right: calc(50% - 10rem); /* Halfway minus half the width of the usage bubble */
+    }
+
+    /* No more little triangle hanging off the usage bubble */
+    #triangle {
+        display: none;
+    }
+}
