@@ -189,6 +189,7 @@ body {
         background-image: url("./images/bg-mobile.png");
         background-repeat: no-repeat;
         background-position-y: 0;
+        min-width: 375px;
     }
 
     /* Minor adjustments from flex direction change */
@@ -196,6 +197,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 85%;
         gap: 2rem;
     }
 
