@@ -1,0 +1,197 @@
+
+:root {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 10px;
+    
+    /* For the bg gradient */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* Divider */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    position: relative; /* This allows the box to float above the card, which does not allow overflow */
+}
+
+#primary-card {
+    background: white;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -57rem -29rem;
+    padding: 8rem 0;
+    max-width: 920px;
+    min-width: 920px;
+    border-radius: 2.5rem;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero-img {
+    position: relative;
+    left: -8rem;
+}
+
+#mobile-img {
+    display: none;
+}
+
+#pc-content-panel {
+    flex-grow: 1;
+    margin: 0 8rem 0 0;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+/* This basically sets the height of the card */
+#pc-main-content {
+    height: 29rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul .question:hover {
+    cursor:pointer;
+
+}
+
+ul .question:hover p{
+    font-weight: 700;
+    color: var(--Soft-red);
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+ul li p{
+    line-height: 2rem;
+    padding: .5rem 1rem .5rem .5rem;
+    margin: 1rem 0;
+}
+
+.qa {
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    padding-right: 2rem;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.question img {
+    transition-property: transform;
+    transition-duration: 0.25s;
+}
+
+.expanded .question img {
+    transform: rotate(180deg);
+}
+
+
+.answer {
+    display: none;
+}
+
+
+.expanded .answer {
+    display: block;
+}
+
+.expanded .question > p {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: black;
+}
+
+
+#orange-cube {
+    position: absolute;
+    top: 23rem;
+    left: -13rem;
+    z-index: 1;
+}
+
+@media (max-width: 930px)
+{
+    body {
+        flex-direction: column;
+        
+    }
+
+    #primary-card {
+        max-width: 320px;
+        min-width: 320px;
+        flex-direction: column;
+        padding: 12rem 0 5rem 0;
+        position: relative;
+        overflow: visible;
+        background-image: url("./images/bg-pattern-mobile.svg");
+        background-position: 3.9rem -.5rem;
+    }
+
+    #hero-img {
+        display: none;
+    }
+
+    #mobile-img {
+        display: block;
+        position: absolute;
+        top: -11rem;
+        right: 40px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .qa {
+        padding: 0;
+    }
+
+    /* Sets the primary height for the card */
+    #pc-content-panel {
+        margin: 0 2rem;
+        height: 37rem;
+    }
+
+    #orange-cube {
+        display:none;
+    }
+}

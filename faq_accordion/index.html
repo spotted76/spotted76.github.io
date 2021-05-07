@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script type="module" src="./src/index.js" defer></script>
+</head>
+
+<body>
+
+  <main>
+    <figure>
+      <img id="orange-cube" src= "./images/illustration-box-desktop.svg" alt="floating orange cube">
+    </figure>
+    <div id="primary-card">
+
+      <img id="hero-img" src="./images/illustration-woman-online-desktop.svg" alt="woman standing in front of computer">
+      <img id="mobile-img" src="./images/illustration-woman-online-mobile.svg"
+        alt="woman standing in front of computer">
+
+      <div id="pc-content-panel">
+        <h1>FAQ</h1>
+
+        <div id="pc-main-content">
+          <ul>
+
+            <!-- Could do these with a details tab, but I'm going to try and 
+                 do 1 open at a time, so use some JS, and maybe animate -->
+            <li>
+              <div class="qa">
+                <div class="question">
+                  <p>How many team members can I invite?</p>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow icon">
+                </div>
+                <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on
+                  team members for the Premium plan.</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="qa expanded ">
+                <div class="question">
+                  <p>What is the maximum file upload size?</p>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow icon">
+                </div>
+                <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="qa">
+                <div class="question">
+                  <p>How do I reset my password?</p>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow icon">
+                </div>
+                <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile
+                  page.
+                  A reset link will be emailed to you.</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="qa">
+                <div class="question">
+                  <p>Can I cancel my subscription?</p>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow icon">
+                </div>
+                <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="qa">
+                <div class="question">
+                  <p>Do you provide additional support?</p>
+                  <img src="./images/icon-arrow-down.svg" alt="arrow icon">
+                </div>
+                <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business
+                  hours.</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>
